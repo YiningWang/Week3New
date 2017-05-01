@@ -1,0 +1,31 @@
+---
+title       : Coursera Data Product Week3 Project
+subtitle    : April 30 2017
+author      : Y.Wang
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Code
+```{r } 
+library(plotly)
+```
+
+---
+
+## PLOT
+
+```{r, error=FALSE, warning=FALSE} 
+ 
+p= plot_ly(mtcars, x=~wt ,y=~mpg,mode="markers",type ="scatter", color =~disp)
+htmlwidgets::saveWidget(as.widget(p), file = "Week3Final.html")
+```
+<iframe src="Week3Final.html" style="position:absolute;height:100%;width:100%"></iframe>
+
+ 
+
